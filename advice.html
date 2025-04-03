@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Advice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="health.html">Health Q&A</a></li>
+            <li><a href="routine.html">Routine fix</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Personalized Health Advice</h2>
+        <div id="adviceContent"></div>
+    </section>
+    
+    <button onclick="location.href='routine.html'" style="display:block; margin: 20px auto; padding:10px 20px; font-size:16px;">Go to Routine Fix</button>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const adviceContent = document.getElementById("adviceContent");
+            let advice = "";
+
+            if (urlParams.get("exercise") !== "daily") {
+                advice += "<p><strong>Exercise:</strong> Try to engage in daily physical activity for at least 30 minutes.</p>";
+            }
+            if (urlParams.get("sleepHours") < 7) {
+                advice += "<p><strong>Sleep:</strong> Aim for 7-9 hours of quality sleep each night.</p>";
+            }
+            if (urlParams.get("diet") !== "yes") {
+                advice += "<p><strong>Diet:</strong> Incorporate more fruits and vegetables into your meals.</p>";
+            }
+            if (urlParams.get("stress") !== "never" && urlParams.get("stress") !== "rarely") {
+                advice += "<p><strong>Stress Management:</strong> Try meditation or breathing exercises to reduce stress levels.</p>";
+            }
+            if (urlParams.get("waterIntake") < 8) {
+                advice += "<p><strong>Hydration:</strong> Drink at least 8 glasses of water daily to stay hydrated.</p>";
+            }
+            if (urlParams.get("fastFood") !== "never") {
+                advice += "<p><strong>Diet:</strong> Reduce fast food intake and choose healthier meal options.</p>";
+            }
+            if (urlParams.get("smokeAlcohol") !== "no") {
+                advice += "<p><strong>Smoking & Alcohol:</strong> Avoid smoking and excessive alcohol consumption for better health.</p>";
+            }
+            if (urlParams.get("medicalCheckup") !== "regularly") {
+                advice += "<p><strong>Medical Check-ups:</strong> Schedule regular health check-ups for early detection of issues.</p>";
+            }
+            
+            adviceContent.innerHTML = advice || "<p>You are maintaining a healthy lifestyle. Keep it up!</p>";
+        });
+    </script>
+</body>
+</html>

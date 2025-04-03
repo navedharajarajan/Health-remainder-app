@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="health.html">Health Q&A</a></li>
+            <li><a href="routine.html">Routine Fix</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Sign Up</h2>
+        <p>Create an account to manage your health routines effectively.</p>
+        <form id="signupForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p style="margin-top: 20px;">Already have an account?</p>
+        <button onclick="location.href='login.html'" class="login-button">Login</button>
+    </section>
+    <script src="script1.js"></script>
+</body>
+</html>

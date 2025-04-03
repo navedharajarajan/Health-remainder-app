@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="routine.html">Routine Fix</a></li>
+            <li><a href="medicine.html">Medicine</a></li>
+            <li><a href="health.html">Health Q&A</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="reports.html">Reports</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>User Profile</h1>
+        <form id="profileForm">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" required>
+
+            <label for="userAge">Age:</label>
+            <input type="number" id="userAge" min="1" required>
+
+            <label for="userGender">Gender:</label>
+            <select id="userGender" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="healthConditions">Health Conditions:</label>
+            <textarea id="healthConditions" placeholder="E.g., Diabetes, Hypertension"></textarea>
+
+            <button type="submit">Save Profile</button>
+        </form>
+
+        <h2>Your Profile</h2>
+        <div id="profileDisplay">No profile data yet.</div>
+    </section>
+
+    <script src="profile.js"></script>
+</body>
+</html>

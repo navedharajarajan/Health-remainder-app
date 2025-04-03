@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light Blue Background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #1976d2; /* Deep Blue */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    max-width: 500px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    top: 60px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #1976d2;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+input {
+    width: 100%;
+    max-width: 450px;
+    padding: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+button {
+    width: 100%;
+    max-width: 450px;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #1565c0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    section {
+        width: 90%;
+    }
+    input, button {
+        max-width: 100%;
+    }
+}

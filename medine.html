@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Reminder</title>
+    <link rel="stylesheet" href="medicine_reminder_styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="routine.html">Routine Fix</a></li>
+            <li><a href="medicine.html">Medicine Reminder</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <h1>Medicine Reminder</h1>
+        <p>Set up reminders for your medication.</p>
+        
+        <h2>Set Medicine Schedule</h2>
+        <form id="medicineForm">
+            <label for="medicineName">Medicine Name:</label>
+            <input type="text" id="medicineName" required>
+            
+            <label for="medicineTime">Time to Take Medicine:</label>
+            <input type="time" id="medicineTime" required>
+            
+            <button type="submit">Set Reminder</button>
+        </form>
+        
+        <h2>Your Medicine Schedule</h2>
+        <div id="medicineDisplay">No medicine reminders set yet.</div>
+    </section>
+    
+    <script src="medicine_reminder_script.js"></script>
+</body>
+</html>

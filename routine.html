@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Fix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="health.html">Health Q&A</a></li>
+            <li><a href="routine.html">Routine Fix</a></li>
+            <li><a href="medine.html">Medicine Reminder</a></li>
+            <li><a href="reports.html">Reports</a></li>
+
+        </ul>
+    </nav>
+    <section>
+        <h1>Fix Your Daily Routine</h1>
+        <p>Personalize your daily health routine by setting reminders and tracking progress.</p>
+        
+        <h2>Set Your Routine</h2>
+        <form id="routineForm">
+            <label for="wakeTime">Wake-up Time:</label>
+            <input type="time" id="wakeTime" required>
+            
+            <label for="waterIntake">Water Intake Reminder (per hour):</label>
+            <input type="number" id="waterIntake" min="1" required>
+            
+            <label for="meditation">Meditation Duration (mins):</label>
+            <input type="number" id="meditation" min="0" required>
+            
+            <label for="breakfastTime">Breakfast Time:</label>
+            <input type="time" id="breakfastTime" required>
+            
+            <label for="lunchTime">Lunch Time:</label>
+            <input type="time" id="lunchTime" required>
+            
+            <label for="dinnerTime">Dinner Time:</label>
+            <input type="time" id="dinnerTime" required>
+            
+            <label for="sleepTime">Sleep Time:</label>
+            <input type="time" id="sleepTime" required>
+            
+            <button type="submit">Save Routine</button>
+        </form>
+        
+        <h2>Your Saved Routine</h2>
+        <div id="routineDisplay">No routine set yet.</div>
+    </section>
+    <button id="medicinePageButton">Go to Medicine Reminder</button>
+
+    <script>
+        document.getElementById("routineForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const routine = {
+                wakeTime: document.getElementById("wakeTime").value,
+                waterIntake: document.getElementById("waterIntake").value,
+                meditation: document.getElementById("meditation").value,
+                breakfastTime: document.getElementById("breakfastTime").value,
+                lunchTime: document.getElementById("lunchTime").value,
+                dinnerTime: document.getElementById("dinnerTime").value,
+                sleepTime: document.getElementById("sleepTime").value
+            };
+    
+            // Save to localStorage
+            localStorage.setItem("userRoutine", JSON.stringify(routine));
+    
+            // Display the saved routine on the same page
+            displayRoutine();
+    
+            alert("Routine saved successfully!");
+    
+            // Show the button after saving routine
+            document.getElementById("medicinePageButton").style.display = "block";
+        });
+    
+        function displayRoutine() {
+            const routineData = localStorage.getItem("userRoutine");
+            if (routineData) {
+                const routine = JSON.parse(routineData);
+                document.getElementById("routineDisplay").innerHTML = `
+                    <p><strong>Wake-up Time:</strong> ${routine.wakeTime}</p>
+                    <p><strong>Water Intake Reminder:</strong> Every ${routine.waterIntake} hour(s)</p>
+                    <p><strong>Meditation Duration:</strong> ${routine.meditation} mins</p>
+                    <p><strong>Breakfast Time:</strong> ${routine.breakfastTime}</p>
+                    <p><strong>Lunch Time:</strong> ${routine.lunchTime}</p>
+                    <p><strong>Dinner Time:</strong> ${routine.dinnerTime}</p>
+                    <p><strong>Sleep Time:</strong> ${routine.sleepTime}</p>
+                `;
+            }
+        }
+    
+        // Load the saved routine when the page loads
+        document.addEventListener("DOMContentLoaded", displayRoutine);
+    
+        // Redirect when the button is clicked
+        document.getElementById("medicinePageButton").addEventListener("click", function() {
+            window.location.href = "medine.html";
+        });
+    </script>
+    
+</body>
+</html>

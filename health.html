@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Q&A</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="routine.html">Routine Fix</a></li>
+            <li><a href="medine.html">Medicine</a></li>
+            
+        </ul>
+    </nav>
+    <section>
+        <h2>Health Check-Up Q&A</h2>
+        <p>Answer the following questions to assess your health condition.</p>
+        <form id="healthForm">
+            <label>How often do you exercise?</label>
+            <select id="exercise" required>
+                <option value="">Select an option</option>
+                <option value="daily">Daily</option>
+                <option value="few_times_week">A few times a week</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+            
+            <label>How many hours do you sleep per night?</label>
+            <input type="number" id="sleepHours" min="0" max="24" required>
+            
+            <label>Do you have a balanced diet?</label>
+            <select id="diet" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>Do you experience frequent stress?</label>
+            <select id="stress" required>
+                <option value="">Select an option</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+            
+            <label>How many glasses of water do you drink daily?</label>
+            <input type="number" id="waterIntake" min="0" max="20" required>
+            
+            <label>How often do you consume fast food?</label>
+            <select id="fastFood" required>
+                <option value="">Select an option</option>
+                <option value="daily">Daily</option>
+                <option value="few_times_week">A few times a week</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+            
+            <label>Do you smoke or consume alcohol?</label>
+            <select id="smokeAlcohol" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label>How often do you get medical check-ups?</label>
+            <select id="medicalCheckup" required>
+                <option value="">Select an option</option>
+                <option value="regularly">Regularly</option>
+                <option value="once_year">Once a year</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="result"></p>
+    </section>
+    <script src="qna.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light Blue Background */
+    color: #333;
+}
+
+nav {
+    background-color: #1976d2; /* Deep Blue */
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #1976d2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background-color: #1565c0;
+}
+#medicinePageButton {
+    display: none;
+    margin: 20px auto; /* Centers horizontally */
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    width: fit-content;
+}
+#medicinePageButton:hover {
+    background-color: #0056b3;
+}

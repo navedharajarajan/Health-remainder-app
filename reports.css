@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+nav {
+    background: #007bff;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #0056b3;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+div {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Button Styling */
+button#clearReports {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#clearReports:hover {
+    background: #c82333;
+}
